@@ -1,10 +1,12 @@
-version: '2.2'
-
 services:
-  vuepress:
+  frontend:
     build:
       context: .
     ports:
       - '8080:8080'
     volumes:
       - ./:/data
+      - static_node_modules:/data/node_modules
+
+volumes:
+  static_node_modules: {}

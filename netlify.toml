@@ -3,14 +3,9 @@
 
 [build]
   publish = "public"
-  command = "yarn build"
+  command = "npm run build"
 
-[[redirects]]
-  from = "/api"
-  to = "/api/index.html"
-  status = 302
-
-[[redirects]]
-  from = "/demo"
-  to = "/demo.html"
-  status = 302
+[[plugins]]
+package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+  pretty = true
